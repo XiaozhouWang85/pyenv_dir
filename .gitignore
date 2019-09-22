@@ -1,0 +1,13 @@
+# Ignore all pyenv version files
+*.python-versions
+
+# Ignore all data files
+*.csv
+*.json
+*.npy
+*.tar.gz
+*.tar
+
+#python data files
+*.ivecs
+*.fvecs
