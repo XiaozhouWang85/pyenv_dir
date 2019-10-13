@@ -7,5 +7,5 @@ source $PARENT_DIR/init.sh
 
 #Move to script location and run script
 cd $PARENT_DIR/$CURR_DIR
-#python run_lsh.py
-python download_sift.py 
+python run_lsh.py 0
+#python download_sift.py 

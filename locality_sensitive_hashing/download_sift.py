@@ -23,13 +23,14 @@ def tar_extract(fname):
 	tar.extractall()
 	tar.close()
 
-'''
+
 directory = "downloads"
+
 if not os.path.exists(directory):
     os.makedirs(directory)
 
 ftp_download("ftp://ftp.irisa.fr/local/texmex/corpus/siftsmall.tar.gz","downloads/siftsmall.tar.gz")
 ftp_download("ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz","downloads/sift.tar.gz")
-'''
+
 tar_extract("downloads/siftsmall.tar.gz")
 tar_extract("downloads/sift.tar.gz")
