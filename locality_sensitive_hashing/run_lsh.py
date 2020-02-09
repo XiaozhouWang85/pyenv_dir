@@ -76,7 +76,7 @@ def merge_indices(blocks,dir_path):
 
 	print("merge %d inverted lists " % ivf_vector.size())
 	ntotal = invlists.merge_from(ivf_vector.data(), ivf_vector.size())
-
+	print(ntotal)
 	# now replace the inverted lists in the output index
 	index.ntotal = ntotal
 	index.replace_invlists(invlists)
@@ -85,7 +85,7 @@ def merge_indices(blocks,dir_path):
 	faiss.write_index(index, dir_path + "populated.index")
 
 stage = int(sys.argv[1])
-TMPDIR = '/tmp/'
+TMPDIR = 'tmp/'
 INPUT_VECTOR_LEARN = "sift/sift_learn.fvecs"
 INPUT_VECTOR_BASE = "sift/sift_base.fvecs"
 INPUT_VECTOR_QUERY = "sift/sift_query.fvecs"
@@ -106,8 +106,8 @@ if stage == 0:
 
 if stage == 1:
     # perform a search from disk
-    print("read " + tmpdir + "populated.index")
-    index = faiss.read_index(tmpdir + "populated.index")
+    print("read " + TMPDIR + "populated.index")
+    index = faiss.read_index(TMPDIR + "populated.index")
     index.nprobe = 16
 
     # load query vectors and ground-truth
@@ -115,7 +115,8 @@ if stage == 1:
     gt = ivecs_read(INPUT_VECTOR_TRUTH)
 
     D, I = index.search(xq[:3], 5)
-
+    print(D)
+    print(I)
     #recall_at_1 = (I[:, :1] == gt[:, :1]).sum() / float(xq.shape[0])
     #print("recall@1: %.3f" % recall_at_1)
 
