@@ -11,3 +11,12 @@
 #python data files
 *.ivecs
 *.fvecs
+
+#neural network files
+
+*.weights
+*.tf.index
+*.tf.data*
+
+#Image files
+*.jpg
