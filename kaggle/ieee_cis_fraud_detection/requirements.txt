@@ -1,7 +1,7 @@
 pandas==1.1.2
 scikit-learn==0.23.2
 pytest==5.4.3
-tensorflow==2.3.0
+tensorflow==2.3.1
 tensorflow-transform==0.24.1
 apache_beam==2.21.0
 imbalanced-learn==0.7.0
