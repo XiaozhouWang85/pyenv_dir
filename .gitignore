@@ -1,5 +1,12 @@
+#Mac files
+*DS_Store
+
+#Python files
+*.pyc
+
 # Ignore all pyenv version files
 *.python-versions
+*.python-version
 
 # Ignore all data files
 *.csv
@@ -7,6 +14,8 @@
 *.npy
 *.tar.gz
 *.tar
+adult.test
+adult.data
 
 #python data files
 *.ivecs
@@ -20,3 +29,6 @@
 
 #Image files
 *.jpg
+
+#Pickles
+*.pkl
