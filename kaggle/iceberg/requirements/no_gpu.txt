@@ -1,2 +1,2 @@
 -r common.txt
-tensorflow==2.3.0
+tensorflow==2.5.3
